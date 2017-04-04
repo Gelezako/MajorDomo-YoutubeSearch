@@ -1,0 +1,52 @@
+
+<!-- table zwave_devices search -->
+<div  id='api_settings'>
+&nbsp;
+<form action="?" method="post" enctype="multipart/form-data" name="frmEdit" class="form-horizontal">
+<fieldset>
+<div class="form-group">
+ <label class="control-label"[#if ERR_API_KEY#] style="color:red;font-weight:bold"[#endif#]>
+ Google Developer Key: (*)
+ </label>
+ <div class="controls"><input type="text" name="api_key" value="[#API_KEY#]" class="input"></div>
+ </br>
+<label class="control-label"[#if MAX_COUNT#] style="color:red;font-weight:bold"[#endif#]>
+Максимальное колличество youtube клипов: (*)
+ </label></br><div class="controls">
+ <input type="text" name="maxCount" list="count" placeholder="1-25">
+<datalist id="count">
+<option value="1" [#if maxCount="1" #]  selected[#endif#]>1</option>
+<option value="2" [#if maxCount="2" #]  selected[#endif#]>2</option>
+<option value="3" [#if maxCount="3" #]  selected[#endif#]>3</option>
+<option value="4" [#if maxCount="4" #]  selected[#endif#]>4</option>
+<option value="5" [#if maxCount="5" #]  selected[#endif#]>5</option>
+<option value="6" [#if maxCount="6" #]  selected[#endif#]>6</option>
+<option value="7" [#if maxCount="7" #]  selected[#endif#]>7</option>
+<option value="8" [#if maxCount="8" #]  selected[#endif#]>8</option>
+<option value="9" [#if maxCount="9" #]  selected[#endif#]>9</option>
+<option value="10" [#if maxCount="10" #]  selected[#endif#]>10</option>
+<option value="11" [#if maxCount="11" #]  selected[#endif#]>11</option>
+<option value="12" [#if maxCount="12" #]  selected[#endif#]>12</option>
+<option value="13" [#if maxCount="13" #]  selected[#endif#]>13</option>
+<option value="14" [#if maxCount="14" #]  selected[#endif#]>14</option>
+<option value="15" [#if maxCount="15" #]  selected[#endif#]>15</option>
+<option value="16" [#if maxCount="16" #]  selected[#endif#]>16</option>
+<option value="17" [#if maxCount="17" #]  selected[#endif#]>17</option>
+<option value="18" [#if maxCount="18" #]  selected[#endif#]>18</option>
+<option value="19" [#if maxCount="19" #]  selected[#endif#]>19</option>
+<option value="20" [#if maxCount="20" #]  selected[#endif#]>20</option>
+<option value="21" [#if maxCount="21" #]  selected[#endif#]>21</option>
+<option value="22" [#if maxCount="22" #]  selected[#endif#]>22</option>
+<option value="23" [#if maxCount="23" #]  selected[#endif#]>23</option>
+<option value="24" [#if maxCount="24" #]  selected[#endif#]>24</option>
+<option value="25" [#if maxCount="25" #]  selected[#endif#]>25</option>
+</datalist></div>
+</div>
+<div class="form-actions">
+<button type="submit" name="subm" value="Submit" class="btn btn-primary"><#LANG_UPDATE#></button>
+<input type="hidden" name="view_mode" value="update_settings">
+<input type="hidden" name="mode" value="update">
+</div>
+</fieldset>
+</form>
+</div>
