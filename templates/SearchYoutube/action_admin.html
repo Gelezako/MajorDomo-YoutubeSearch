@@ -1,53 +1,99 @@
 
-<!-- table zwave_devices search -->
-<div  id='api_settings'>
-&nbsp;
+<h3>Устройства Yeelight</h3><br>
+
+<div class="float-right">
+	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#about">О модуле&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign icon-white"></span>
+	</button>
+</div>
+<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="about1" aria-hidden="true">
+<!-- <div id="about" class="modal hide"> -->
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">Устройства Yeelight</h4>
+			</div>
+			<div class="modal-body">
+				<div class="float-right">
+					<img src="../templates/Yeelight/img/YeelightLogo.jpg"  width="58" height="58">
+					<br><br><p><b>v.0.1</b></p>
+				</div>
+                <p class="float-left">
+					Модуль поддержки Yeelight устройств. <br><br>
+					Обсуждение модуля на <a href="https://majordomo.smartliving.ru/forum/viewtopic.php?f=4&t=4193" target="_blank">форуме</a>.<br>
+					Проект на <a href="https://github.com/Gelezako/MajorDomo-Yeelight" target="_blank">Github</a>.<br>
+					Проект в <a href="https://connect.smartliving.ru/tasks/64.html" target="_blank">Connect</a>.<br>
+				</p>
+				<hr size="1">
+				<p class="float-left">
+				Поддержать разработку и развитие модуля:
+				<ul>
+				    <li>Страничка для доната в: <a href="https://www.liqpay.ua/ru/checkout/380972054741" target="_blank">Liqpay</a></li>
+					<li>Страничка для доната в: <a href="https://www.patreon.com/user?u=8755313" target="_blank">Patreon</a></li>
+					<li>Внутренний счет в <a href="https://connect.smartliving.ru/tasks/64.html" target="_blank">Connect</a></li>
+					<li>WMZ: Z361986620412</li>
+					<li>WMR: R202811747775</li>
+					<li>WMU: U201862406146</li>
+					<li>WME: E313349347372</li>
+				</ul>
+                </p>
+			</div>
+			<div class="modal-footer">
+				<div class="pull-left">Автор: <a href="https://telegram.me/gelezako" target="_blank">Gelezako</a></div>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
+	<img src="../templates/Yeelight/img/YeelightLogo.jpg"  width="120" height="120">
+	&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;
+</div>
+
 <form action="?" method="post" enctype="multipart/form-data" name="frmEdit" class="form-horizontal">
+[#if OK#]
+<div class="alert alert-success"><#LANG_DATA_SAVED#></div>
+[#endif OK#]
+[#if ERR#]
+<div class="alert alert-error"><#LANG_FILLOUT_REQURED#></div>
+[#endif ERR#]
 <fieldset>
 <div class="form-group">
- <label class="control-label"[#if ERR_API_KEY#] style="color:red;font-weight:bold"[#endif#]>
- Google Developer Key: (*)
- </label>
- <div class="controls"><input type="text" name="api_key" value="[#API_KEY#]" class="input"></div>
- </br>
-<label class="control-label"[#if MAX_COUNT#] style="color:red;font-weight:bold"[#endif#]>
-Максимальное колличество youtube клипов: (*)
- </label></br><div class="controls">
- <input type="text" name="maxCount" list="count" placeholder="1-25">
-<datalist id="count">
-<option value="1" [#if maxCount="1" #]  selected[#endif#]>1</option>
-<option value="2" [#if maxCount="2" #]  selected[#endif#]>2</option>
-<option value="3" [#if maxCount="3" #]  selected[#endif#]>3</option>
-<option value="4" [#if maxCount="4" #]  selected[#endif#]>4</option>
-<option value="5" [#if maxCount="5" #]  selected[#endif#]>5</option>
-<option value="6" [#if maxCount="6" #]  selected[#endif#]>6</option>
-<option value="7" [#if maxCount="7" #]  selected[#endif#]>7</option>
-<option value="8" [#if maxCount="8" #]  selected[#endif#]>8</option>
-<option value="9" [#if maxCount="9" #]  selected[#endif#]>9</option>
-<option value="10" [#if maxCount="10" #]  selected[#endif#]>10</option>
-<option value="11" [#if maxCount="11" #]  selected[#endif#]>11</option>
-<option value="12" [#if maxCount="12" #]  selected[#endif#]>12</option>
-<option value="13" [#if maxCount="13" #]  selected[#endif#]>13</option>
-<option value="14" [#if maxCount="14" #]  selected[#endif#]>14</option>
-<option value="15" [#if maxCount="15" #]  selected[#endif#]>15</option>
-<option value="16" [#if maxCount="16" #]  selected[#endif#]>16</option>
-<option value="17" [#if maxCount="17" #]  selected[#endif#]>17</option>
-<option value="18" [#if maxCount="18" #]  selected[#endif#]>18</option>
-<option value="19" [#if maxCount="19" #]  selected[#endif#]>19</option>
-<option value="20" [#if maxCount="20" #]  selected[#endif#]>20</option>
-<option value="21" [#if maxCount="21" #]  selected[#endif#]>21</option>
-<option value="22" [#if maxCount="22" #]  selected[#endif#]>22</option>
-<option value="23" [#if maxCount="23" #]  selected[#endif#]>23</option>
-<option value="24" [#if maxCount="24" #]  selected[#endif#]>24</option>
-<option value="25" [#if maxCount="25" #]  selected[#endif#]>25</option>
-</datalist></div>
+<div>
+<table class="table table-stripped">
+ <tr>
+  <td><#LANG_DEVICE#></td>
+  <td>Иконка</td>
+  <td>IP</td>
+  <td>&nbsp;</td>
+ </tr>
+ 
+[#begin obj#]
+ <tr>
+  <td valign="top"><#model#></td>
+   <td style="vertical-align:middle">
+	[#if model!=""#]
+		<img src="../templates/Yeelight/img/small/<#model#>.png" height="40px">
+	[#else#]
+		<img src="../templates/Yeelight/img/small/unknown.png" height="36px">
+	[#endif#]
+   </td>
+   <td>
+	[#if IP!=""#]
+		<#IP#>
+		&nbsp;
+	[#endif#]
+ </tr>
+[#end obj#]
+</table> 
 </div>
-<div class="form-actions">
-<button type="submit" name="subm" value="Submit" class="btn btn-primary"><#LANG_UPDATE#></button>
-<input type="hidden" name="view_mode" value="update_settings">
-<input type="hidden" name="mode" value="update">
 </div>
 </fieldset>
 </form>
-<a href="http://majordomo.smartliving.ru/forum/viewtopic.php?f=5&t=3915" target="_blank">Обсуждение модуля на форуме</a>.<br>
-</div>
+
+
+
+
+
